@@ -230,7 +230,7 @@ export function install(Vue) {
   install.installed = true;
 }
 
-function createVueWait(options) {
+export function createVueWait(options) {
   const Wait = {
     async install(app) {
       if (this.installed && app) {
@@ -258,6 +258,6 @@ function createVueWait(options) {
 }
 
 // Export which are imported to export
-export { mapWaitingActions, mapWaitingGetters, waitFor, createVueWait };
+export { mapWaitingActions, mapWaitingGetters, waitFor };
 
 VueWait.install = install;
